@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="https://www.google.com" method="POST" id="review_form">
+        <fieldset>
+            <legend>Your Details:</legend>
+            <label for="id_name">Name: </label>
+            <input type="text" name="name" id="id_name" placeholder="Enter your name" required maxlength="50" size="40" /><br /><br />
+            <label for="id_password">Password: </label>
+            <input type="password" name="password" id="id_password" placeholder="Enter your password" required maxlength="20" size="40" title="Your password must contain an uppercase letter, a lowercase letter, # symbol and must be eight characters long" pattern="[A-Za-z0-9#]{8}"/><br /><br />
+            <label for="id_dob">Date of Birth: </label>
+            <input type="datetime-local" name="dob" id="id_dob" /><br /><br />
+            <label for="id_age">Age: </label>
+            <input type="number" name="age" id="id_age" min="18" max="50" value="20" step="1" /><br /><br />
+            <label for="id_phone">Phone Number: </label>
+            <input type="text" name="phone" id="id_phone" placeholder="ten digit phone number" pattern="[0-9]{10}" /><br /><br />
+            <label for="id_email">Email: </label>
+            <input type="email" name="email" id="id_email" placeholder="Enter your email id" required maxlength="50" size="40" /><br /><br />
+            <label for="id_website">Website that you might have developed: </label>
+            <input type="url" name="website" id="id_website" /><br /><br />
+            <label for="id_working_city">City you work in:</label>
+            <select name="working_city" id="id_working_city">
+                <option value="Mumbai">Mumbai</option>
+                <option value="Banglore">Banglore</option>
+                <option value="Pune">Pune</option>
+                <option value="Nashik">Nashik</option>
+            </select><br /><br />
+            <label>Working Hours: </label><br />
+            <label for="id_starttime">Start Time</label>
+            <input type="time" name="starttime" id="id_starttime" /><br />
+            <label for="id_endtime">End Time</label>
+            <input type="time" name="endtime" id="id_endtime" /><br /><br />
+
+            <label for="id_documents">Please upload the required documents: </label><br />
+            <input type="file" name="documents" id="id_documents" multiple/><br />
+        </fieldset><br />
+
+        <fieldset>
+            <legend>Your Review:</legend>
+            <label for="id_information">How did you hear about us?</label>
+            <input list="id_advertisement" id="id_information" />
+            <datalist id="id_advertisement">
+                <option value="Google"></option>
+                <option value="Facebook"></option>
+                <option value="Twitter"></option>
+                <option value="Newspaper"></option>
+                <option value="People"></option>
+                <option value="Banners"></option>
+            </datalist>
+
+            <br /><br />
+
+            <label>Would you like to visit again?</label><br />
+            <input type="radio" name="visit_again" id="id_yes" value="YES" checked="checked" />
+            <label for="id_yes">Yes</label>
+            <input type="radio" name="visit_again" id="id_no" value="NO" />
+            <label for="id_no">No</label>
+            <input type="radio" name="visit_again" id="id_maybe" value="MAYBE" />
+            <label for="id_maybe">Maybe</label>
+            
+            <br /><br />
+
+            <label for="id_comments">Comments:</label><br />
+            <textarea name="comments" id="id_comments" cols="40" rows="10" placeholder="please enter your comments here"></textarea>
+            <br /><br />
+
+            <label for="id_rating">Rating: </label>
+            <input type="range" min="0" max="10" value="0" step="1" style="accent-color: hotpink" /><br /><br />
+
+            <input type="checkbox" name="email_updates" id="id_email_updates" />
+            <label for="id_email_updoates">Sign up for the email updates</label><br /><br />
+            <input type="submit" value="submit review">
+
+        </fieldset>
+    </form>
+</body>
+</html>
